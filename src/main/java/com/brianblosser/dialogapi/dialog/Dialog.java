@@ -3,19 +3,18 @@ package com.brianblosser.dialogapi.dialog;
 import com.brianblosser.dialogapi.core.BaseEntity;
 
 import javax.persistence.Entity;
-import java.util.ArrayList;
 
 @Entity
 public class Dialog extends BaseEntity {
 	private String name;
-	private ArrayList<String> roles;
-	private ArrayList<String> lines;
+	private String roles;
+	private String lines;
 
 	public Dialog() {
 		super();
 	}
 
-	public Dialog(String name, ArrayList<String> roles, ArrayList<String> lines) {
+	public Dialog(String name, String roles, String lines) {
 		this();
 		this.name = name;
 		this.roles = roles;
@@ -30,19 +29,19 @@ public class Dialog extends BaseEntity {
 		this.name = name;
 	}
 
-	public ArrayList<String> getRoles() {
+	public String getRoles() {
 		return roles;
 	}
 
-	public void setRoles(ArrayList<String> roles) {
+	public void setRoles(String roles) {
 		this.roles = roles;
 	}
 
-	public ArrayList<String> getLines() {
+	public String getLines() {
 		return lines;
 	}
 
-	public void setLines(ArrayList<String> lines) {
+	public void setLines(String lines) {
 		this.lines = lines;
 	}
 }
